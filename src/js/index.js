@@ -1,3 +1,6 @@
+// @author: Christian Yael Mejía Galindo.
+// @param: {link}
+
 // Selecciona todos los elementos con la clase ".nav-link"
 document.querySelectorAll(".nav-link").forEach((link) => {
   // A cada elemento seleccionado, se le añade un evento de click
