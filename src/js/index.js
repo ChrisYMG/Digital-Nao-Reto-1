@@ -14,3 +14,28 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     this.classList.add("active");
   });
 });
+
+// Función anónima para la validación del formulario
+(() => {
+  "use strict";
+
+  // Obtener el formulario para aplicar estilos de validación Bootstrap personalizados
+  let forms = document.querySelectorAll(".needs-validation");
+
+  // Bucle sobre los campos
+  Array.from(forms).forEach(form => {
+    form.addEventListener(
+      "submit",
+      event => {
+        // Si el formulario no es válido, no se envía
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        // Añadir la clase Bootstrap "was-validated" para mostrar los mensajes de error
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();

@@ -67,7 +67,7 @@
       class="container text-center d-flex align-items-center"
       style="height: 100vh; width: 100vw"
     >
-    <!-- Sección dividida a la mitad, el lado izquierdo tiene una imgen y el lado derecho un branding -->
+      <!-- Sección dividida a la mitad, el lado izquierdo tiene una imgen y el lado derecho un branding -->
       <div class="row">
         <!-- Imagen 1 -->
         <div class="col-md-6">
@@ -99,7 +99,7 @@
       class="container d-flex align-items-center justify-content-center"
       style="width: 100vw; height: 100vh"
     >
-    <!-- Sección en 4 partes, dos imágenes y dos textos -->
+      <!-- Sección en 4 partes, dos imágenes y dos textos -->
       <div class="row h-100">
         <!-- Texto 1 -->
         <div class="col-md-8 h-50 d-flex flex-column justify-content-center">
@@ -138,7 +138,9 @@
           />
         </div>
         <!-- Texto 2 -->
-        <div class="col-md-8 h-50 d-flex flex-column justify-content-center align-items-center">
+        <div
+          class="col-md-8 h-50 d-flex flex-column justify-content-center align-items-center"
+        >
           <p class="fs-6 fs-md-5 fw-bold text-center text-dark">
             Nuestro equipo de expertos en finanzas proporciona asesoramiento y
             recursos para ayudar a las startups a crecer y prosperar. Nos
@@ -161,11 +163,12 @@
       class="container d-flex align-items-center justify-content-center"
       style="width: 100vw; height: 100vh"
     >
-    <!-- Sección dividida a la mitad, el lado izquierdo tiene un formulario y el lado derecho un texto -->
+      <!-- Sección dividida a la mitad, el lado izquierdo tiene un formulario y el lado derecho un texto -->
       <div class="row w-100">
         <!-- Formulario -->
         <div class="col-md-6">
-          <form>
+          <!-- Clase needs-validation para activar validación de campos -->
+          <form class="needs-validation" novalidate>
             <div class="form-group">
               <label for="nombre">Nombre</label>
               <input
@@ -173,7 +176,10 @@
                 class="form-control"
                 id="nombre"
                 placeholder="Ingresa tu nombre"
+                required
               />
+              <!-- Clase invalid-feedback para mostrar mensaje de error -->
+              <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
@@ -182,7 +188,11 @@
                 class="form-control"
                 id="email"
                 placeholder="Ingresa tu email"
+                required
               />
+              <div class="invalid-feedback">
+                Por favor ingresa un correo electrónico válido.
+              </div>
             </div>
             <div class="form-group">
               <label for="mensaje">Mensaje</label>
@@ -191,7 +201,9 @@
                 id="mensaje"
                 rows="3"
                 placeholder="Ingresa tu mensaje"
+                required
               ></textarea>
+              <div class="invalid-feedback">Por favor ingresa tu mensaje.</div>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
@@ -199,7 +211,7 @@
         <!-- Texto para contacto -->
         <div
           class="col-md-6 d-flex flex-column justify-content-center fs-6 fs-md-5 fw-bold text-center text-dark"
-        > 
+        >
           <h2>Contáctanos</h2>
           <p>
             Estamos ansiosos por escuchar de ti. Completa este formulario y uno
